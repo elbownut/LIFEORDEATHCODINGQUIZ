@@ -404,6 +404,188 @@ function question7() {
         wrong();
     });
 }
+//Question 8 layout.
+function question8() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "If . represents class, # represents ___";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Number";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        wrongcw();
+        question9()
+        wrong();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "Id";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        correctcw();
+        question9();
+        correct();
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "Pound";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        wrongcw();
+        question9()
+        wrong();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "Hash";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        wrongcw();
+        question9()
+        wrong();
+    });
+}
+
+//Question 9 layout.
+function question9() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "Which of the following is NOT a loop?";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "for";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        wrongcw();
+        question10()
+        wrong();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "while";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        wrongcw();
+        question10()
+        wrong();
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "do-while";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        wrongcw();
+        question10()
+        wrong();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "don't";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        correctcw();
+        question10();
+        correct();
+    });
+}
+
+//Question 10 layout.
+function question10() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "Inside which HTML element (< >) do we put the JavaScript?";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "js";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        wrong();
+        wrongcw();
+        postquiz();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "scripting";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        wrong();
+        wrongcw();
+        postquiz(); 
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "script";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        correctcw();
+        postquiz();
+        correct();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "javascript";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        wrong();
+        wrongcw();
+        postquiz();
+    });
+}
+
+//Post-quiz layout.
+function postquiz() {
+    timepoints();
+    seconds = 0; 
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    highscore.style.visibility = "visible";
+    question.textContent = "Quiz Complete! Your score is " + score + ". Please enter your initials below."
+    
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Submit";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        localStorage.setItem("user", highscore.value);
+        localStorage.setItem("score", score);
+        scorepage();
+    });
+}
+
+//High score page layout.
+function scorepage() {
+    clearInterval (timerInterval);
+    a1.remove();
+    a2.remove();
+    highscore.style.visibility = "hidden";
+    banner.textContent = "High Scores"
+    
+    question.textContent = localStorage.getItem("user") + ": " + localStorage.getItem("score");
+    
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Restart Quiz";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        location.reload();
+    });
+
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "Clear Scores";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        localStorage.clear();
+        question.textContent = "";
+    });
+}
+
 
 
 

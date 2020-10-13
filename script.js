@@ -135,4 +135,275 @@ function question1() {
 
     });
 }
+//Question 2 layout.
+function question2() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "Using ___ statement is how you test for a specific condition.";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "For";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        wrongcw();
+        question3();
+        wrong();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "If";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        correctcw();
+        question3();
+        correct();
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "Select";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        wrongcw();
+        question3();
+        wrong();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "Switch";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        wrongcw();
+        question3();
+        wrong();
+    });
+}
+
+//Question 3 layout.
+function question3() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "Which of the following is not considered a JavaScript operator?";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "new";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        wrongcw();
+        question4();
+        wrong();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "this";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        correctcw();
+        question4();
+        correct();
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "delete";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        wrongcw();
+        question4();
+        wrong();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "typeof";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        wrongcw();
+        question4();
+        wrong();
+    });
+}
+
+//Question 4 layout.
+function question4() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "JavaScript is interpreted by ____";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Client";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        correctcw();
+        question5();
+        correct();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "Server";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        wrongcw();
+        question5();
+        wrong();
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "Oject";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        wrongcw();
+        question5();
+        wrong();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "None of these";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        wrongcw();
+        question5();
+        wrong();
+    });
+}
+
+//Question 5 layout.
+function question5() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "____method evaluates a string of JavaScript code in the context of the specified object.";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Evparse";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        wrongcw();
+        question6();
+        wrong();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "Parsclick";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        wrongcw();
+        question6();
+        wrong();
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "ParseInt";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        wrongcw();
+        question6();
+        wrong();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "Eval";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        correctcw();
+        question6();
+        correct();
+    });
+}
+
+//Question 6 layout.
+function question6() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "The C in CSS stands for: ";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Cursive";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        wrongcw();
+        question7()
+        wrong();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "Coded";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        wrongcw();
+        question7()
+        wrong();
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "Cascading";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        correctcw();
+        question7();
+        correct();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "Coding";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        wrongcw();
+        question7()
+        wrong();
+    });
+}
+
+//Question 7 layout.
+function question7() {
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    question.textContent = "HTML is in charge of the ___";
+       
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Content";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        correctcw();
+        question8();
+        correct();
+    });
+ 
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "Colors";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        wrongcw();
+        question8()
+        wrong();
+    });
+
+    a3 = document.createElement("BUTTON");
+    a3.innerHTML = "Size";
+    document.body.children[4].appendChild(a3);
+    a3.addEventListener("click", function () {
+        wrongcw();
+        question8()
+        wrong();
+    });
+
+    a4 = document.createElement("BUTTON");
+    a4.innerHTML = "Function";
+    document.body.children[4].appendChild(a4);
+    a4.addEventListener("click", function () {
+        wrongcw();
+        question8()
+        wrong();
+    });
+}
+
+
 
